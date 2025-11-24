@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeepHealth | Innovation in AI & Healthcare</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .hero-bg {
+            background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.8)), url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="font-bold text-2xl text-blue-700">DeepHealth</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-slate-600 hover:text-blue-600 transition">Home</a>
+                    <a href="#research" class="text-slate-600 hover:text-blue-600 transition">Research</a>
+                    <a href="#team" class="text-slate-600 hover:text-blue-600 transition">Team</a>
+                    <a href="#publications" class="text-slate-600 hover:text-blue-600 transition">Publications</a>
+                    <a href="#jobs" class="text-slate-600 hover:text-blue-600 transition">Jobs</a>
+                    <a href="#contact" class="px-4 py-2 rounded-md bg-blue-600 text-white hover:bg-blue-700 transition">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home" class="hero-bg h-screen flex items-center justify-center text-white">
+        <div class="text-center px-4 max-w-4xl">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6">Curiosity Converges with <span class="text-blue-400">Innovation</span></h1>
+            <p class="text-xl md:text-2xl text-slate-300 mb-8 font-light">
+                Welcome to the forefront of innovation at DeepHealth. We push the boundaries of AI in Healthcare, Medical Imaging, and Underwater Exploration.
+            </p>
+            <a href="#research" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 rounded-lg transition shadow-lg">
+                Explore Our Research
+            </a>
+        </div>
+    </header>
+
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/3">
+                <div class="rounded-xl overflow-hidden shadow-2xl">
+                    <img src="https://via.placeholder.com/400x500?text=Dr.+Satish+K.+Panda" alt="Dr. Satish K. Panda" class="w-full h-auto object-cover">
+                </div>
+            </div>
+            <div class="md:w-2/3">
+                <h2 class="text-3xl font-bold text-slate-900 mb-4">Principal Investigator</h2>
+                <h3 class="text-xl text-blue-600 font-semibold mb-4">Dr. Satish K. Panda</h3>
+                <p class="text-slate-600 mb-4 leading-relaxed">
+                    Assistant Professor at IIT Bhubaneswar (School of Mechanical Sciences) and affiliated with the AI and HPC Research Center. Previously an Assistant Professor at IIT Guwahati and Research Fellow at Singapore Eye Research Institute.
+                </p>
+                <p class="text-slate-600 mb-6 leading-relaxed">
+                    Dr. Panda earned his PhD in Biomedical Engineering from the National University of Singapore. His research centers on image processing and the development of AI and deep learning networks for healthcare and computer vision applications.
+                </p>
+                
+                <div class="grid grid-cols-2 gap-4 text-sm">
+                    <div class="bg-slate-100 p-3 rounded">
+                        <strong class="block text-slate-900">PhD (2015-2019)</strong>
+                        National University of Singapore
+                    </div>
+                    <div class="bg-slate-100 p-3 rounded">
+                        <strong class="block text-slate-900">MTech (2011-2013)</strong>
+                        IIT Delhi, India
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="research" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-900">Research Areas & Projects</h2>
+                <p class="mt-4 text-slate-600 max-w-2xl mx-auto">Our multidisciplinary team tackles complex challenges in Healthcare and Underwater exploration.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition border-t-4 border-blue-500">
+                    <h3 class="text-lg font-bold mb-2">Schizophrenia Diagnostics (ICMR)</h3>
+                    <p class="text-sm text-slate-500 mb-3">Grant: 95 Lakh</p>
+                    <p class="text-slate-600 text-sm">AI-powered tool for autonomous identification of retinal phenotypes as potential diagnostic biomarkers for Schizophrenia spectrum disorders.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition border-t-4 border-teal-500">
+                    <h3 class="text-lg font-bold mb-2">Glaucoma Detection (SERB-SRG)</h3>
+                    <p class="text-sm text-slate-500 mb-3">Grant: 32 Lakh</p>
+                    <p class="text-slate-600 text-sm">Fully automated diagnostic software for evidence-based glaucoma detection by identifying structural biomarkers of the optic nerve head.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition border-t-4 border-indigo-500">
+                    <h3 class="text-lg font-bold mb-2">Underwater Monitoring (IITG TIH)</h3>
+                    <p class="text-sm text-slate-500 mb-3">Grant: 45 Lakh</p>
+                    <p class="text-slate-600 text-sm">An intelligent vision system for autonomous health monitoring of underwater oil pipelines.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition border-t-4 border-purple-500">
+                    <h3 class="text-lg font-bold mb-2">Cranial Implants & VR (VARCOE)</h3>
+                    <p class="text-sm text-slate-500 mb-3">Grant: 30 Lakh</p>
+                    <p class="text-slate-600 text-sm">Virtual reality assisted 3D reconstruction and selective powder deposition printing of cranial implants for Neurofibromatosis.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition border-t-4 border-blue-500">
+                    <h3 class="text-lg font-bold mb-2">Hybrique Startup</h3>
+                    <p class="text-sm text-slate-500 mb-3">Innovation</p>
+                    <p class="text-slate-600 text-sm">AI-powered Platform for Electronic Product Design. Automated BOM creation from CAD drawings.</p>
+                    <a href="http://www.hybrique.com" class="text-blue-600 text-sm mt-2 inline-block hover:underline">Visit Hybrique &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="team" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-slate-900 mb-12">Lab Members</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold text-blue-800 mb-4 border-b pb-2">PostDoc / Research Scientists</h3>
+                    <ul class="space-y-4">
+                        <li class="flex flex-col">
+                            <span class="font-bold">Dr. Suraj Singh</span>
+                            <span class="text-sm text-slate-500">Retinal Phenotypes & Schizophrenia (Jan 2025 - Present)</span>
+                        </li>
+                         <li class="flex flex-col">
+                            <span class="font-bold">Tishya Chattopadhyay (JRF)</span>
+                            <span class="text-sm text-slate-500">VR Assisted 3D Reconstruction (Mar 2025 - Present)</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-semibold text-blue-800 mb-4 border-b pb-2">Research Scholars</h3>
+                    <ul class="space-y-4">
+                        <li class="flex flex-col">
+                            <span class="font-bold">Amit Kumar Chaurasiya</span>
+                            <span class="text-sm text-slate-500">Cranial Implants from CT Data</span>
+                        </li>
+                        <li class="flex flex-col">
+                            <span class="font-bold">Subhabrat Swain</span>
+                            <span class="text-sm text-slate-500">Underwater Oil Pipeline Monitoring</span>
+                        </li>
+                        <li class="flex flex-col">
+                            <span class="font-bold">Rituparna Addy</span>
+                            <span class="text-sm text-slate-500">Ocular Disease Detection</span>
+                        </li>
+                         <li class="flex flex-col">
+                            <span class="font-bold">Smruti Ranjan Senapati</span>
+                            <span class="text-sm text-slate-500">VR & Cranial Implants</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="publications" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-slate-900 mb-8">Selected Publications</h2>
+            <div class="space-y-6">
+                <div class="bg-white p-4 rounded border-l-4 border-slate-800">
+                    <p class="text-slate-800 font-semibold">AI-Enhanced Insights: Advancing Corneal Endothelial Cell Analysis...</p>
+                    <p class="text-slate-500 text-sm">SK Panda, KY Tey, A Dash, et al. — <em class="text-slate-700">Investigative Ophthalmology & Visual Science (2024)</em></p>
+                </div>
+                <div class="bg-white p-4 rounded border-l-4 border-slate-800">
+                    <p class="text-slate-800 font-semibold">Adduction induces large optic nerve head deformations in subjects with normal-tension glaucoma</p>
+                    <p class="text-slate-500 text-sm">T Chuangsuwanich, ..., SK Panda — <em class="text-slate-700">British Journal of Ophthalmology (2024)</em></p>
+                </div>
+                <div class="bg-white p-4 rounded border-l-4 border-slate-800">
+                    <p class="text-slate-800 font-semibold">Discriminating between papilledema and optic disc drusen using 3D structural analysis...</p>
+                    <p class="text-slate-500 text-sm">MJA Girard, S Panda, et al. — <em class="text-slate-700">Neurology (2023)</em></p>
+                </div>
+                <div class="bg-white p-4 rounded border-l-4 border-slate-800">
+                    <p class="text-slate-800 font-semibold">Patent: Systems for AI-driven creation of bill of materials</p>
+                    <p class="text-slate-500 text-sm">Satish Kumar PANDA (2022) — WO2022132040A1</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="jobs" class="py-20 bg-blue-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                <div>
+                    <h2 class="text-3xl font-bold mb-2">Join the Team</h2>
+                    <p class="text-blue-200">We are constantly looking for bright students for PhD and Research positions.</p>
+                </div>
+                <a href="mailto:skpanda@iitbbs.ac.in" class="mt-4 md:mt-0 bg-white text-blue-900 px-6 py-3 rounded font-bold hover:bg-blue-50 transition">Apply via Email</a>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-blue-800 p-6 rounded-lg border border-blue-700">
+                    <h3 class="text-xl font-bold text-white mb-2">Project Research Scientist-I</h3>
+                    <p class="text-blue-200 text-sm mb-4">Funded by ICMR | ₹56,000 + HRA</p>
+                    <p class="text-blue-100 text-sm mb-4">Passionate about AI and Medical Image Processing. Prior knowledge of AI/ML is mandatory.</p>
+                    <span class="text-xs uppercase tracking-wide text-blue-300">Ref: IIT/SRIC/R/RP404/2024/101</span>
+                </div>
+
+                <div class="bg-blue-800 p-6 rounded-lg border border-blue-700">
+                    <h3 class="text-xl font-bold text-white mb-2">Sr. Research Scientist</h3>
+                    <p class="text-blue-200 text-sm mb-4">AI in Genomics & Drug Discovery | ₹9-12 LPA</p>
+                    <p class="text-blue-100 text-sm mb-4">Lead advanced research at the intersection of AI, ML, genomics, and bioinformatics. PhD Required.</p>
+                    <span class="text-xs uppercase tracking-wide text-blue-300">Ref: AHRC Job Ad No 2024-4</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-8">
+            <div>
+                <span class="text-white text-2xl font-bold block mb-4">DeepHealth</span>
+                <p class="mb-2"><strong class="text-white">Office:</strong> Room 102, School of Mechanical Sciences (SMS)</p>
+                <p class="mb-2">IIT Bhubaneswar, Odisha, India</p>
+            </div>
+            <div class="md:text-right">
+                <p class="mb-2"><strong class="text-white">Phone:</strong> +91-674-7137150</p>
+                <p class="mb-2"><strong class="text-white">Email:</strong> <a href="mailto:skpanda@iitbbs.ac.in" class="hover:text-blue-400">skpanda@iitbbs.ac.in</a></p>
+                <p class="mt-4 text-sm">&copy; 2025 DeepHealth Lab. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
