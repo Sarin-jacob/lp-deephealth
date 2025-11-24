@@ -1,0 +1,24 @@
+
+services:
+  deephealth-landing-page:
+    # Build the image using the Dockerfile in the current directory
+    build: .
+    
+    # Optional: Give the image a specific name
+    image: deephealth-static:latest
+    
+    # Optional: Give the container a custom name for easy identification
+    container_name: deephealth-landing-page
+    
+    # Map port 3000 inside the container to port 3000 on your machine
+    # Format is "HOST_PORT:CONTAINER_PORT"
+    # ports:
+      # - "3000:3000"
+    
+    # Restart policy (optional, good for production)
+    restart: unless-stopped
+    networks: [tsnet]
+    
+  networks:
+    tsnet:
+      external: true
