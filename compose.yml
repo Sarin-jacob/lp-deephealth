@@ -18,7 +18,7 @@ services:
     # Restart policy (optional, good for production)
     restart: unless-stopped
     networks: [tsnet]
-    
-  networks:
-    tsnet:
-      external: true
+
+networks:
+  tsnet:
+    external: true
