@@ -10,4 +10,4 @@ EXPOSE 3000
 COPY . .
 
 # Run BusyBox httpd
-CMD ["busybox", "httpd", "-f", "-v", "-p", "3000","-e" ,"404.html"]
+CMD ["busybox", "httpd", "-f", "-v", "-p", "3000","-e" ,"404"]
