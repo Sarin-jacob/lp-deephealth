@@ -10,4 +10,6 @@ EXPOSE 3000
 COPY . .
 
 # Run BusyBox httpd
-CMD ["busybox", "httpd", "-f", "-v", "-p", "3000","-e" ,"404"]
+CMD ["busybox", "httpd", "-f", "-v", "-p", "3000"]
+# To serve a custom 404 error page, uncomment the following line and ensure you have a 404.html file in your build context
+# CMD ["busybox", "httpd", "-f", "-v", "-p", "3000","-e" ,"404"] # not working...
