@@ -1,11 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DeepHealth | Advanced Cognitive & Medical Solutions</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class', // Enables toggling dark mode via a class on the HTML tag
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
     
     <link rel="icon" type="image/png" href="/favicon.png">
 
@@ -13,107 +25,111 @@
     
     <style>
         body { font-family: 'Inter', sans-serif; }
-        .glass-card {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.5);
-        }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-800 flex flex-col min-h-screen">
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-900 dark:text-slate-100 flex flex-col min-h-screen transition-colors duration-300">
 
-    <nav class="bg-white border-b border-slate-200">
+    <nav class="bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 transition-colors duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
                 <div class="flex items-center">
                     <a href="/" class="flex-shrink-0 flex items-center gap-2">
-                        <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold">D</div>
-                        <span class="font-bold text-xl tracking-tight text-slate-900">DeepHealth</span>
+                        <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold shadow-sm">D</div>
+                        <span class="font-bold text-xl tracking-tight text-slate-900 dark:text-white">DeepHealth</span>
                     </a>
                 </div>
                 
-                <div class="hidden sm:flex sm:items-center sm:space-x-8">
-                    <a href="/skullview" class="text-sm font-medium text-slate-500 hover:text-blue-600 transition">SkullView</a>
-                    <a href="/psytest" class="text-sm font-medium text-slate-500 hover:text-blue-600 transition">PsyTest</a>
-                    <a href="/psycheck" class="text-sm font-medium text-slate-500 hover:text-blue-600 transition">PsyCheck</a>
-                    <a href="#" class="px-4 py-2 text-sm font-medium text-white bg-slate-900 rounded-md hover:bg-slate-800 transition">Sign In</a>
+                <div class="flex items-center space-x-6">
+                    <div class="hidden sm:flex space-x-6">
+                        <a href="/skullview" class="text-sm font-medium text-slate-500 hover:text-blue-600 dark:text-slate-400 dark:hover:text-blue-400 transition">SkullView</a>
+                        <a href="/psytest" class="text-sm font-medium text-slate-500 hover:text-blue-600 dark:text-slate-400 dark:hover:text-blue-400 transition">PsyTest</a>
+                        <a href="/psycheck" class="text-sm font-medium text-slate-500 hover:text-blue-600 dark:text-slate-400 dark:hover:text-blue-400 transition">PsyCheck</a>
+                    </div>
+                    
+                    <button id="theme-toggle" type="button" class="text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 focus:outline-none focus:ring-4 focus:ring-slate-200 dark:focus:ring-slate-700 rounded-lg text-sm p-2.5 transition-colors">
+                        <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                        
+                        <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                    </button>
+
+                    <a href="#" class="hidden sm:block px-4 py-2 text-sm font-medium text-white bg-slate-900 rounded-md hover:bg-slate-800 dark:bg-blue-600 dark:hover:bg-blue-500 transition">Sign In</a>
                 </div>
             </div>
         </div>
     </nav>
 
     <main class="flex-grow">
-        <div class="relative isolate overflow-hidden bg-white">
+        <div class="relative isolate overflow-hidden">
             <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80">
-                <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-20 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"></div>
+                <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-20 dark:opacity-10 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"></div>
             </div>
 
             <div class="mx-auto max-w-7xl px-6 pb-24 pt-20 sm:pb-32 lg:px-8">
                 <div class="mx-auto max-w-2xl text-center">
-                    <h1 class="text-4xl font-bold tracking-tight text-slate-900 sm:text-6xl">
+                    <h1 class="text-4xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-6xl">
                         Unlocking Human Potential
                     </h1>
-                    <p class="mt-6 text-lg leading-8 text-slate-600">
+                    <p class="mt-6 text-lg leading-8 text-slate-600 dark:text-slate-300">
                         DeepHealth integrates advanced medical imaging with psychological assessment tools. We provide the technology to visualize the physical brain and understand the mind.
                     </p>
                 </div>
 
                 <div class="mx-auto mt-16 grid max-w-lg grid-cols-1 gap-8 sm:mt-20 lg:max-w-none lg:grid-cols-3">
                     
-                    <article class="flex flex-col bg-white rounded-2xl shadow-sm hover:shadow-xl transition-shadow duration-300 border border-slate-100 overflow-hidden">
+                    <article class="flex flex-col bg-white dark:bg-slate-800 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 dark:border-slate-700 overflow-hidden">
                         <div class="h-2 bg-blue-600 w-full"></div>
                         <div class="p-8 flex flex-col flex-grow">
                             <div class="flex items-center gap-x-4 text-xs mb-4">
-                                <span class="relative z-10 rounded-full bg-blue-50 px-3 py-1.5 font-medium text-blue-600">Medical Imaging</span>
+                                <span class="relative z-10 rounded-full bg-blue-50 dark:bg-blue-900/30 px-3 py-1.5 font-medium text-blue-600 dark:text-blue-400">Medical Imaging</span>
                             </div>
-                            <h3 class="text-2xl font-bold text-slate-900 group-hover:text-blue-600">
+                            <h3 class="text-2xl font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400">
                                 <a href="/skullview">SkullView</a>
                             </h3>
-                            <p class="mt-4 text-sm leading-6 text-slate-600 flex-grow">
+                            <p class="mt-4 text-sm leading-6 text-slate-600 dark:text-slate-300 flex-grow">
                                 A powerful web service for DICOM files. Generate high-quality 3D models of the skull and brain, clip views to see inside, and generate custom patches for cranial defects.
                             </p>
-                            <div class="mt-8 pt-6 border-t border-slate-100">
-                                <a href="/skullview" class="text-sm font-semibold leading-6 text-blue-600 flex items-center gap-1 hover:gap-2 transition-all">
+                            <div class="mt-8 pt-6 border-t border-slate-100 dark:border-slate-700">
+                                <a href="/skullview" class="text-sm font-semibold leading-6 text-blue-600 dark:text-blue-400 flex items-center gap-1 hover:gap-2 transition-all">
                                     Launch Viewer <span aria-hidden="true">→</span>
                                 </a>
                             </div>
                         </div>
                     </article>
 
-                    <article class="flex flex-col bg-white rounded-2xl shadow-sm hover:shadow-xl transition-shadow duration-300 border border-slate-100 overflow-hidden">
+                    <article class="flex flex-col bg-white dark:bg-slate-800 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 dark:border-slate-700 overflow-hidden">
                         <div class="h-2 bg-indigo-600 w-full"></div>
                         <div class="p-8 flex flex-col flex-grow">
                             <div class="flex items-center gap-x-4 text-xs mb-4">
-                                <span class="relative z-10 rounded-full bg-indigo-50 px-3 py-1.5 font-medium text-indigo-600">Cognitive Performance</span>
+                                <span class="relative z-10 rounded-full bg-indigo-50 dark:bg-indigo-900/30 px-3 py-1.5 font-medium text-indigo-600 dark:text-indigo-400">Cognitive Performance</span>
                             </div>
-                            <h3 class="text-2xl font-bold text-slate-900">
+                            <h3 class="text-2xl font-bold text-slate-900 dark:text-white">
                                 <a href="/psytest">PsyTest</a>
                             </h3>
-                            <p class="mt-4 text-sm leading-6 text-slate-600 flex-grow">
+                            <p class="mt-4 text-sm leading-6 text-slate-600 dark:text-slate-300 flex-grow">
                                 A complete cognitive test suite measuring attention, response inhibition, and control. Includes standard protocols like Stroop, Go/No-Go, and Continuous Performance Tests (CPT).
                             </p>
-                            <div class="mt-8 pt-6 border-t border-slate-100">
-                                <a href="/psytest" class="text-sm font-semibold leading-6 text-indigo-600 flex items-center gap-1 hover:gap-2 transition-all">
+                            <div class="mt-8 pt-6 border-t border-slate-100 dark:border-slate-700">
+                                <a href="/psytest" class="text-sm font-semibold leading-6 text-indigo-600 dark:text-indigo-400 flex items-center gap-1 hover:gap-2 transition-all">
                                     Enter Test Suite <span aria-hidden="true">→</span>
                                 </a>
                             </div>
                         </div>
                     </article>
 
-                    <article class="flex flex-col bg-white rounded-2xl shadow-sm hover:shadow-xl transition-shadow duration-300 border border-slate-100 overflow-hidden">
+                    <article class="flex flex-col bg-white dark:bg-slate-800 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 dark:border-slate-700 overflow-hidden">
                         <div class="h-2 bg-teal-500 w-full"></div>
                         <div class="p-8 flex flex-col flex-grow">
                             <div class="flex items-center gap-x-4 text-xs mb-4">
-                                <span class="relative z-10 rounded-full bg-teal-50 px-3 py-1.5 font-medium text-teal-600">Self Assessment</span>
+                                <span class="relative z-10 rounded-full bg-teal-50 dark:bg-teal-900/30 px-3 py-1.5 font-medium text-teal-600 dark:text-teal-400">Self Assessment</span>
                             </div>
-                            <h3 class="text-2xl font-bold text-slate-900">
+                            <h3 class="text-2xl font-bold text-slate-900 dark:text-white">
                                 <a href="/psycheck">PsyCheck</a>
                             </h3>
-                            <p class="mt-4 text-sm leading-6 text-slate-600 flex-grow">
+                            <p class="mt-4 text-sm leading-6 text-slate-600 dark:text-slate-300 flex-grow">
                                 A private assessment portal for mental wellbeing. Screenings for sleep quality, depression, anxiety, internet addiction, and self-esteem to help you recognize patterns in your life.
                             </p>
-                            <div class="mt-8 pt-6 border-t border-slate-100">
-                                <a href="/psycheck" class="text-sm font-semibold leading-6 text-teal-600 flex items-center gap-1 hover:gap-2 transition-all">
+                            <div class="mt-8 pt-6 border-t border-slate-100 dark:border-slate-700">
+                                <a href="/psycheck" class="text-sm font-semibold leading-6 text-teal-600 dark:text-teal-400 flex items-center gap-1 hover:gap-2 transition-all">
                                     Start Assessment <span aria-hidden="true">→</span>
                                 </a>
                             </div>
@@ -124,23 +140,65 @@
             </div>
             
              <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
-                <div class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-20 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"></div>
+                <div class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-20 dark:opacity-10 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"></div>
             </div>
         </div>
     </main>
 
-    <footer class="bg-white border-t border-slate-200">
+    <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 transition-colors duration-300">
         <div class="mx-auto max-w-7xl px-6 py-12 md:flex md:items-center md:justify-between lg:px-8">
             <div class="flex justify-center space-x-6 md:order-2">
-                <a href="#" class="text-slate-400 hover:text-slate-500">Privacy Policy</a>
-                <a href="#" class="text-slate-400 hover:text-slate-500">Terms of Service</a>
-                <a href="#" class="text-slate-400 hover:text-slate-500">Support</a>
+                <a href="#" class="text-slate-400 hover:text-slate-500 dark:hover:text-slate-300">Privacy Policy</a>
+                <a href="#" class="text-slate-400 hover:text-slate-500 dark:hover:text-slate-300">Terms of Service</a>
+                <a href="#" class="text-slate-400 hover:text-slate-500 dark:hover:text-slate-300">Support</a>
             </div>
             <div class="mt-8 md:order-1 md:mt-0">
-                <!-- <p class="text-center text-xs leading-5 text-slate-500">&copy; 2024 DeepHealth Inc. All rights reserved.</p> -->
+                <p class="text-center text-xs leading-5 text-slate-500 dark:text-slate-400">&copy; 2024 DeepHealth Inc. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
+    <script>
+        // Icons
+        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+        // Initial Theme Check
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+            themeToggleLightIcon.classList.remove('hidden');
+        } else {
+            document.documentElement.classList.remove('dark');
+            themeToggleDarkIcon.classList.remove('hidden');
+        }
+
+        const themeToggleBtn = document.getElementById('theme-toggle');
+
+        themeToggleBtn.addEventListener('click', function() {
+            // Toggle icons
+            themeToggleDarkIcon.classList.toggle('hidden');
+            themeToggleLightIcon.classList.toggle('hidden');
+
+            // If is set in localstorage
+            if (localStorage.getItem('color-theme')) {
+                if (localStorage.getItem('color-theme') === 'light') {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                }
+            } else {
+                // If not in localstorage
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                }
+            }
+        });
+    </script>
 </body>
 </html>
