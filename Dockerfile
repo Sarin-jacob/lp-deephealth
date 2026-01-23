@@ -7,7 +7,8 @@ WORKDIR /home/static
 EXPOSE 3000
 # Copy the static website
 # Use the .dockerignore file to control what ends up inside the image!
-COPY . .
+COPY ./index.html .
+COPY ./favicon.png .
 
 # Run BusyBox httpd
 CMD ["busybox", "httpd", "-f", "-v", "-p", "3000"]
