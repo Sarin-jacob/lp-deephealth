@@ -18,6 +18,10 @@ services:
     # Restart policy (optional, good for production)
     restart: unless-stopped
     networks: [tsnet]
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.lp.rule=Host(`deephealth.co.in`)"
+      - "traefik.http.routers.lp.tls.certresolver=dhresolver"
 
 networks:
   tsnet:
