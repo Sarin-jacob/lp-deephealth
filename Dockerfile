@@ -8,7 +8,7 @@ EXPOSE 3000
 # Copy the static website
 # Use the .dockerignore file to control what ends up inside the image!
 COPY ./index.html .
-COPY ./favicon.png .
+COPY ./favicon* .
 
 # Run BusyBox httpd
 CMD ["busybox", "httpd", "-f", "-v", "-p", "3000"]
